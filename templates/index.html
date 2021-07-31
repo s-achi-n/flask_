@@ -34,7 +34,7 @@
     </tr>
   </thead>
   <tbody>
-       {% if alltodo |length==0 %}
+       {% comment %} {% if alltodo |length==0 %}
          
          <div class="alert alert-dark" role="alert">
   NO TODO FOUND. ADD YOUR FIRST TODO NOW
@@ -60,7 +60,7 @@
     {% endfor %}
     {% endif%}
     
-      
+       {% endcomment %}
       
   
   </tbody>

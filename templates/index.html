@@ -34,7 +34,7 @@
     </tr>
   </thead>
   <tbody>
-       {% comment %} {% if alltodo |length==0 %}
+       {% if alltodo |length==0 %}
          
          <div class="alert alert-dark" role="alert">
   NO TODO FOUND. ADD YOUR FIRST TODO NOW
@@ -43,7 +43,7 @@
           {% else %}
         
   
-  {% for todo in alltodo %} 
+  {% comment %} {% for todo in alltodo %} 
 
     <tr>
       <th scope="row">{{loop.index}}</th>
@@ -57,10 +57,16 @@
       
 
     </tr>
-    {% endfor %}
+    {% endfor %} {% endcomment %}
+        
+         <div class="alert alert-dark" role="alert">
+     NO TODO FOUND. ADD YOUR FIRST TODO NOW
+   </div>
+
     {% endif%}
+
     
-       {% endcomment %}
+      
       
   
   </tbody>
